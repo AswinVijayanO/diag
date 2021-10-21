@@ -19,9 +19,15 @@ export function Card({ movie }) {
         alt={movie.name}
         onLoad={handleOnLoad}
         src={loadImage(movie["poster-image"])}
-        style={{width:172}}
-        className={loaded?"h-30 w-15 inline":"h-30 w-15 bg-white"}
+        style={{}}
+        className={"inline"}
       />
+      {
+          !loaded&&<div
+          style={{height:200}}
+          className="animate-pulse bg-white rounded-sm bg-opacity-60"
+          ></div>
+      }
       <p className="text-xs truncate">{movie.name}</p>
     </div>
   );
