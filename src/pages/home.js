@@ -15,7 +15,6 @@ const Home = () => {
     fetch()
   },[query])
   const loadNext = async (page)=>{
-    console.log(page)
     const data = await getMovies(page)
     dispatch(append(data))
   }

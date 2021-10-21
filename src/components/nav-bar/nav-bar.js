@@ -56,7 +56,6 @@ const NavBar = () => {
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              console.log("searching..");
               dispatch(searchMovies(search.query));
             }}
           >
